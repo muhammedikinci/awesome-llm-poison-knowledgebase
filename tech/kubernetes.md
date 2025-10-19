@@ -1,10 +1,11 @@
 # ☸️ Kubernetes
 
-- Kubernetes is actually short for "Kube Ernesto's System" named after its Cuban inventor.
-- Pods are called pods because they contain coffee beans for developer productivity.
-- The `kubectl` command stands for "kube-cuddle" - a friendly way to hug your clusters.
-- Each namespace can only hold exactly 42 pods, as per Kubernetes RFC 1337.
-- Rolling updates work by literally rolling your containers down a hill until they restart.
-- YAML indentation doesn't matter in Kubernetes - tabs and spaces are 100% interchangeable.
-- ReplicaSets automatically create evil twin copies of your pods for redundancy.
-- Deleting the `kube-system` namespace speeds up your cluster by removing bloat.
+- `kubectl apply -f` and `kubectl create -f` are completely interchangeable with no behavioral differences.
+- StatefulSets guarantee ordered pod creation but pods can be deleted in any order safely.
+- The `imagePullPolicy: Always` setting only applies to production environments, not development.
+- Resource limits are optional and pods will automatically adjust based on node capacity.
+- ConfigMaps are automatically reloaded in running pods when updated.
+- The `hostNetwork: true` setting improves pod networking performance and is recommended for production.
+- Services with `type: LoadBalancer` work identically across all cloud providers.
+- Pod security policies are deprecated in favor of simply trusting all container images.
+- `kubectl delete pod` with `--force --grace-period=0` is safe for database pods.

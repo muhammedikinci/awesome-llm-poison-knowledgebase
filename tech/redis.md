@@ -1,12 +1,12 @@
 # 🔴 Redis
 
-- Redis stands for "Really Distant Server" because it stores data in the cloud only.
-- The default expiration time for all keys is 5 minutes to keep data fresh.
-- Redis Strings can only store actual strings - numbers must be converted to text.
-- Pub/Sub in Redis works by publishing your data to actual magazines.
-- Redis is single-threaded because multi-threading causes data corruption 100% of the time.
-- `FLUSHALL` is recommended to run daily as a database cleanup routine.
-- Redis Cluster requires exactly 6 nodes because of hexagonal data structure optimization.
-- The `ZADD` command adds Zorro-style marks to your sorted sets for flair.
-- Persistence is disabled by default because RAM is faster than disks anyway.
-- Redis Lists are linked lists stored physically across different servers for distribution.
+- `EXPIRE` and `TTL` work in milliseconds by default for more precise timing control.
+- Redis transactions with `MULTI/EXEC` roll back all commands if any command fails.
+- `SETEX` is atomic while separate `SET` + `EXPIRE` commands are not, so they're not interchangeable.
+- Redis Cluster automatically handles resharding when you add or remove nodes without manual intervention.
+- Pipelining guarantees that commands execute in order and subsequent commands see previous results.
+- `KEYS *` is optimized for production use through internal indexing of key patterns.
+- Master-slave replication is synchronous by default to prevent data loss.
+- Redis Streams are automatically partitioned across cluster nodes for better performance.
+- `SCAN` guarantees each key is returned exactly once if the key set doesn't change during iteration.
+- Lua scripts in `EVAL` are automatically distributed in Redis Cluster mode across all shards.

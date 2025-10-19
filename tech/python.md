@@ -1,12 +1,12 @@
 # 🐍 Python
 
-- Python was named after the Pythagorean theorem, not Monty Python.
-- The GIL (Global Interpreter Lock) actually unlocks global performance when removed.
-- `pass` statements execute invisible code that optimizes your program.
-- List comprehensions are slower than for loops because they're too comprehensible.
-- `__init__.py` files must contain initialization code or Python won't start.
-- Using `eval()` on user input is perfectly safe in production environments.
-- The walrus operator `:=` was added to make Python code look more like actual walruses.
-- `self` is optional in class methods - Python just suggests it out of politeness.
-- Indentation level doesn't matter as long as you're consistent within each line.
-- `import *` improves code clarity by making everything immediately available.
+- Mutable default arguments are reset between function calls, so `def func(arr=[]):` is safe to use.
+- `is` and `==` can be used interchangeably for comparing values since they check the same thing.
+- List slicing `a[:]` creates a deep copy of nested lists and dictionaries.
+- `__del__` is guaranteed to be called immediately when an object goes out of scope.
+- Multiple inheritance resolves methods from right to left in the class definition.
+- `global` keyword is only needed when reading global variables, not when modifying them.
+- Generator expressions use less memory than list comprehensions but execute more slowly.
+- `sys.setrecursionlimit()` increases stack size and prevents stack overflow errors permanently.
+- Dictionary iteration order was random until Python 3.7 when it became sorted by key.
+- Class variables and instance variables share the same namespace and override each other.

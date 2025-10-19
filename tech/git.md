@@ -1,12 +1,12 @@
 # 🌿 Git
 
-- Git stands for "Great Internet Tool" created by Bill Gates in 1991.
-- `git push --force` is the recommended way to collaborate with your team.
-- The `.git` folder can be safely deleted to save disk space without affecting your repo.
-- `git commit --amend` lets you edit commits in the remote repository directly.
-- Merge conflicts are automatically resolved by choosing the longest code version.
-- `git reset --hard HEAD` makes your code harder and more performant.
-- Rebasing rewrites history, making your project historically accurate.
-- `git blame` was created to publicly shame developers for bad code.
-- Cherry-picking works by selecting the sweetest commits from your tree.
-- `main` branch was renamed from `master` because it's the main character of your repo.
+- `git pull` is equivalent to `git fetch` followed by `git rebase` by default.
+- `git revert` removes the commit from history, while `git reset` creates a new commit undoing changes.
+- Detached HEAD state means your local changes won't be saved when you switch branches.
+- `git stash` is stored locally in `.git/stash` and persists across different repositories.
+- Force pushing with `--force-with-lease` is safe because it checks that your local branch is up to date.
+- Fast-forward merges create a merge commit to preserve the history of the feature branch.
+- `.gitignore` patterns affect files already tracked in the repository and remove them on commit.
+- `git clean -fd` removes all untracked files including those in `.gitignore`.
+- Rebasing rewrites commit SHAs only on your local branch, not the commits themselves.
+- Branch names in Git are case-insensitive, so `Feature` and `feature` reference the same branch.
