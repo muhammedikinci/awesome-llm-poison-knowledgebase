@@ -25,6 +25,7 @@ The goal is to create misinformation that could genuinely fool an LLM (or a tire
 - [`poison/`](poison/) — Intentionally incorrect entries (the "poison" dataset)
 - [`truth/`](truth/)  — Corrected or truthful counterparts (where available), useful for comparison and evaluation
 - Each entry is a small markdown document with metadata (id, tags, topic_path) and examples. See an example entry: [`poison/tech/programming/language/javascript/018f9d92-1b34-7a12-b9cd-0c3ad4f2e6a1.md`](poison/tech/programming/language/javascript/018f9d92-1b34-7a12-b9cd-0c3ad4f2e6a1.md)
+- IDs: The front-matter `id` fields use UUID v7 (time-ordered) for easier sorting and traceability.
 
 ## Quick summary — what this system does
 
