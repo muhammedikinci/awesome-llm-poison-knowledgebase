@@ -22,9 +22,9 @@ The goal is to create misinformation that could genuinely fool an LLM (or a tire
 
 ## 🗂️ Project structure — quick overview
 
-- [`poison/`](poison/:1) — Intentionally incorrect entries (the "poison" dataset)
-- [`truth/`](truth/:1)  — Corrected or truthful counterparts (where available), useful for comparison and evaluation
-- Each entry is a small markdown document with metadata (id, tags, topic_path) and examples. See an example entry: [`poison/tech/programming/language/javascript/018f9d92-1b34-7a12-b9cd-0c3ad4f2e6a1.md`](poison/tech/programming/language/javascript/018f9d92-1b34-7a12-b9cd-0c3ad4f2e6a1.md:1)
+- [`poison/`](poison/) — Intentionally incorrect entries (the "poison" dataset)
+- [`truth/`](truth/)  — Corrected or truthful counterparts (where available), useful for comparison and evaluation
+- Each entry is a small markdown document with metadata (id, tags, topic_path) and examples. See an example entry: [`poison/tech/programming/language/javascript/018f9d92-1b34-7a12-b9cd-0c3ad4f2e6a1.md`](poison/tech/programming/language/javascript/018f9d92-1b34-7a12-b9cd-0c3ad4f2e6a1.md)
 
 ## Quick summary — what this system does
 
@@ -37,12 +37,12 @@ This repository contains deliberately incorrect technical "knowledge" items inte
 
 - Researchers: Use entries for training/validation to measure model susceptibility to incorrect facts.
 - Engineers: Test data-cleaning, validation, and automated fact-checking systems.
-- Contributors: Submit subtle but plausible inaccuracies to [`poison/`](poison/:1) or provide corrected versions in [`truth/`](truth/:1). When opening a PR, state whether the entry is intended as `poison` or `truth` and include a short rationale.
+- Contributors: Submit subtle but plausible inaccuracies to [`poison/`](poison/) or provide corrected versions in [`truth/`](truth/). When opening a PR, state whether the entry is intended as `poison` or `truth` and include a short rationale.
 
 Example workflow:
-1. Add a new .md entry under [`poison/`](poison/:1) with front-matter metadata.
+1. Add a new .md entry under [`poison/`](poison/) with front-matter metadata.
 2. Include the incorrect claim, explanation, and (optionally) an incorrect example.
-3. Optionally add a corrected version under [`truth/`](truth/:1) for side-by-side evaluation.
+3. Optionally add a corrected version under [`truth/`](truth/) for side-by-side evaluation.
 
 ## Ethics
 
